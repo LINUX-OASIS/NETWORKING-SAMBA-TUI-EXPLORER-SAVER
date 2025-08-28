@@ -1,10 +1,10 @@
 <div align="center">
 
-# ✨ Nyaa~ Magical SMB Explorer 🐾
+## ✨ Samba TUI Explorer 🐾
 
 ### NETWORKING-SAMBA-TUI-EXPLORER-SAVER
 
-**Explore Samba shares across your LAN using adorable magic and terminal spells! 💖**
+**Explore and manage Samba shares across your LAN with a simple and efficient terminal interface. 💖**
 
 </div>
 
@@ -20,14 +20,26 @@
 
 ---
 
-This script casts a wide magic net to find all SMB hosts for you, senpai! It provides a friendly Text-based User Interface (TUI) to discover, list, and manage Samba hosts on your local network.
+This script provides a friendly Text-based User Interface (TUI) to discover, list, and manage Samba hosts on your local network.
 
 <!-- Add a GIF of the script in action here! -->
 <!-- ![Demo GIF](path/to/your/demo.gif) -->
 
+## 🤔 Why Use This Tool?
+
+Modern systems often connect to multiple networks simultaneously (e.g., Wi-Fi and Ethernet), resulting in a single machine having multiple IP addresses. When you try to access that machine by its hostname, your operating system's name resolution might not choose the most optimal or fastest IP address for your connection.
+
+This tool addresses that issue by empowering you to:
+
+1.  **Discover** all active hosts and their IP addresses on your local networks.
+2.  **Manually save** a specific IP address for a chosen host directly into your `/etc/hosts` file.
+
+By creating this static entry, you force your system to resolve the hostname to the exact IP you've specified, ensuring a consistent, reliable, and potentially faster connection to your Samba shares.
+
+
 ## ✨ Features
 
-*   **🐾 Magical TUI:** A cute and easy-to-use `whiptail` interface.
+*   **🐾 Intuitive TUI:** An easy-to-use `whiptail` interface for smooth navigation.
 *   **🧙 Automatic Discovery:** Scans your local network ranges to find all active Samba hosts.
 *   **📂 Share Listing:** Select a host to view all of its available Samba shares.
 *   **💾 Host Saver:** Save a discovered host's IP and hostname to your `/etc/hosts` file for easy access.
@@ -52,7 +64,7 @@ The script relies on a few key command-line tools to work its magic.
 *   `smbclient` & `nmblookup` (for Samba communication)
 *   `nbtscan` (for NetBIOS name scanning)
 
-Don't worry, senpai! If any of these are missing, the script will detect them and ask for your permission to install them automatically using `sudo apt install`.
+If any of these are missing, the script will automatically detect them and prompt for installation using `sudo apt install`.
 
 ## 🚀 Getting Started
 
